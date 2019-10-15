@@ -1,3 +1,17 @@
 <resources>
     <string name="app_name">ColorActivitySwitch</string>
+    <string name="palette_title">PaletteActivity</string>
+    <string name="canvas_title">CanvasActivity</string>
+    <string-array name="colors">
+        <item>Red</item>
+        <item>Blue</item>
+        <item>Green</item>
+        <item>Yellow</item>
+        <item>Purple</item>
+        <item>Magenta</item>
+        <item>Cyan</item>
+        <item>Black</item>
+        <item>White</item>
+        <item>Gray</item>
+    </string-array>
 </resources>
