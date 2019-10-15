@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">ColorActividadCambiar</string>
+    <string name="palette_title">PaletaActividad</string>
+    <string name="canvas_title">LonaActividad</string>
+    <string-array name="colors">
+        <item>Red</item>
+        <item>Blue</item>
+        <item>Green</item>
+        <item>Yellow</item>
+        <item>Purple</item>
+        <item>Magenta</item>
+        <item>Cyan</item>
+        <item>Black</item>
+        <item>White</item>
+        <item>Gray</item>
+    </string-array>
+</resources>
