@@ -4,15 +4,15 @@
     <string name="palette_title">PaletaActividad</string>
     <string name="canvas_title">LonaActividad</string>
     <string-array name="colors">
-        <item>Red</item>
-        <item>Blue</item>
-        <item>Green</item>
-        <item>Yellow</item>
-        <item>Purple</item>
+        <item>Rojo</item>
+        <item>Azul</item>
+        <item>Verde</item>
+        <item>Amarillo</item>
+        <item>Purpura</item>
         <item>Magenta</item>
-        <item>Cyan</item>
-        <item>Black</item>
-        <item>White</item>
-        <item>Gray</item>
+        <item>Cian</item>
+        <item>Negro</item>
+        <item>Blanco</item>
+        <item>Gris</item>
     </string-array>
 </resources>

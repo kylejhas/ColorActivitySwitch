@@ -2,6 +2,7 @@ package edu.temple.coloractivityswitch;
 
 import android.content.Context;
 import android.graphics.Color;
+import android.provider.CalendarContract;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.BaseAdapter;
@@ -43,7 +44,38 @@ public class ColorAdapter extends BaseAdapter {
 
         textView.setText(colorVal);
 
-        textView.setBackgroundColor(Color.parseColor(colorVal));
+        switch(colors[i]){
+            case "Rojo":
+                textView.setBackgroundColor(Color.parseColor("Red"));
+                break;
+            case "Azul":
+                textView.setBackgroundColor(Color.parseColor("Blue"));
+                break;
+            case "Verde":
+                textView.setBackgroundColor(Color.parseColor("Green"));
+                break;
+            case "Amarillo":
+                textView.setBackgroundColor(Color.parseColor("Yellow"));
+                break;
+            case "Purpura":
+                textView.setBackgroundColor(Color.parseColor("Purple"));
+                break;
+            case "Cian":
+                textView.setBackgroundColor(Color.parseColor("Cyan"));
+                break;
+            case "Negro":
+                textView.setBackgroundColor(Color.parseColor("Black"));
+                break;
+            case "Blanco":
+                textView.setBackgroundColor(Color.parseColor("White"));
+                break;
+            case "Gris":
+                textView.setBackgroundColor(Color.parseColor("Gray"));
+                break;
+            default:
+                textView.setBackgroundColor(Color.parseColor(colors[i]));
+                break;
+        }
 
 
         return textView;

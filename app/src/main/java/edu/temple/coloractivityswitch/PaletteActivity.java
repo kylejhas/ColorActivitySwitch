@@ -39,8 +39,43 @@ public class PaletteActivity extends AppCompatActivity {
             @Override
             public void onItemSelected(AdapterView<?> parent, View view, int position, long id) {
                 if(readyCheck++ > 0){
+                    String englishColor = colors[position];
                     Intent intent = new Intent(PaletteActivity.this, CanvasActivity.class);
-                    intent.putExtra("BACKGROUND", colors[position]);
+
+                    switch(colors[position]){
+                        case "Rojo":
+                            englishColor = "Red";
+                            break;
+                        case "Azul":
+                            englishColor = "Blue";
+                            break;
+                        case "Verde":
+                            englishColor = "Green";
+                            break;
+                        case "Amarillo":
+                            englishColor = "Yellow";
+                            break;
+                        case "Purpura":
+                            englishColor = "Purple";
+                            break;
+                        case "Cian":
+                            englishColor = "Cyan";
+                            break;
+                        case "Negro":
+                            englishColor = "Black";
+                            break;
+                        case "Blanco":
+                            englishColor = "White";
+                            break;
+                        case "Gris":
+                            englishColor = "Gray";
+                            break;
+                            default:
+                                englishColor = colors[position];
+                                break;
+                    }
+
+                    intent.putExtra("BACKGROUND", englishColor);
                     startActivity(intent);
                 }
 
