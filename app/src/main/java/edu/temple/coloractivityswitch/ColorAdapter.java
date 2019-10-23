@@ -10,23 +10,25 @@ import android.widget.TextView;
 
 public class ColorAdapter extends BaseAdapter {
     private Context context;
-    private String[] colors;
+    private String[] displayColors;
+    private String[] actualColors;
 
-    public ColorAdapter(Context context, String[] colors) {
+    public ColorAdapter(Context context, String[] displayColors, String[] actualColors) {
         this.context = context;
-        this.colors = colors;
+        this.displayColors = displayColors;
+        this.actualColors = actualColors;
     }
 
     @Override
     public int getCount() {
 
-        return colors.length;
+        return displayColors.length;
     }
 
     @Override
     public Object getItem(int i) {
 
-        return colors[i];
+        return displayColors[i];
     }
 
     @Override
@@ -40,44 +42,15 @@ public class ColorAdapter extends BaseAdapter {
 
         TextView textView = new TextView(context);
 
-        String colorVal = colors[i];
+        String displayColor = displayColors[i];
+        String backgroundColor = actualColors[i];
 
-        textView.setText(colorVal);
+        textView.setText(displayColor);
 
-        switch(colors[i]){
-            case "Rojo":
-                textView.setBackgroundColor(Color.parseColor("Red"));
-                break;
-            case "Azul":
-                textView.setBackgroundColor(Color.parseColor("Blue"));
-                break;
-            case "Verde":
-                textView.setBackgroundColor(Color.parseColor("Green"));
-                break;
-            case "Amarillo":
-                textView.setBackgroundColor(Color.parseColor("Yellow"));
-                break;
-            case "Purpura":
-                textView.setBackgroundColor(Color.parseColor("Purple"));
-                break;
-            case "Cian":
-                textView.setBackgroundColor(Color.parseColor("Cyan"));
-                break;
-            case "Negro":
-                textView.setBackgroundColor(Color.parseColor("Black"));
-                break;
-            case "Blanco":
-                textView.setBackgroundColor(Color.parseColor("White"));
-                break;
-            case "Gris":
-                textView.setBackgroundColor(Color.parseColor("Gray"));
-                break;
-            default:
-                textView.setBackgroundColor(Color.parseColor(colors[i]));
-                break;
-        }
+        textView.setBackgroundColor(Color.parseColor(backgroundColor));
 
 
         return textView;
+
     }
 }

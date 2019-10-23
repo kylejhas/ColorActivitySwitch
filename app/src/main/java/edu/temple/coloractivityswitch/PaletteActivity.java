@@ -16,6 +16,7 @@ import java.util.Objects;
 public class PaletteActivity extends AppCompatActivity {
 
     String[] colors;
+    String[] actual_colors;
     int readyCheck = 0;
 
     @Override
@@ -30,8 +31,9 @@ public class PaletteActivity extends AppCompatActivity {
         final Spinner spinner = findViewById(R.id.spinner);
 
         colors = res.getStringArray(R.array.colors);
-
-        ColorAdapter adapter = new ColorAdapter(PaletteActivity.this, colors);
+        actual_colors = res.getStringArray(R.array.actual_colors);
+        
+        ColorAdapter adapter = new ColorAdapter(PaletteActivity.this, colors, actual_colors);
 
         spinner.setAdapter(adapter);
 
@@ -39,43 +41,8 @@ public class PaletteActivity extends AppCompatActivity {
             @Override
             public void onItemSelected(AdapterView<?> parent, View view, int position, long id) {
                 if(readyCheck++ > 0){
-                    String englishColor = colors[position];
                     Intent intent = new Intent(PaletteActivity.this, CanvasActivity.class);
-
-                    switch(colors[position]){
-                        case "Rojo":
-                            englishColor = "Red";
-                            break;
-                        case "Azul":
-                            englishColor = "Blue";
-                            break;
-                        case "Verde":
-                            englishColor = "Green";
-                            break;
-                        case "Amarillo":
-                            englishColor = "Yellow";
-                            break;
-                        case "Purpura":
-                            englishColor = "Purple";
-                            break;
-                        case "Cian":
-                            englishColor = "Cyan";
-                            break;
-                        case "Negro":
-                            englishColor = "Black";
-                            break;
-                        case "Blanco":
-                            englishColor = "White";
-                            break;
-                        case "Gris":
-                            englishColor = "Gray";
-                            break;
-                            default:
-                                englishColor = colors[position];
-                                break;
-                    }
-
-                    intent.putExtra("BACKGROUND", englishColor);
+                    intent.putExtra("BACKGROUND", actual_colors[position]);
                     startActivity(intent);
                 }
 

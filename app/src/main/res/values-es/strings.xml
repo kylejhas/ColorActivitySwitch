@@ -15,4 +15,17 @@
         <item>Blanco</item>
         <item>Gris</item>
     </string-array>
+    <string-array name="actual_colors">
+        <item>Red</item>
+        <item>Blue</item>
+        <item>Green</item>
+        <item>Yellow</item>
+        <item>Purple</item>
+        <item>Magenta</item>
+        <item>Cyan</item>
+        <item>Black</item>
+        <item>White</item>
+        <item>Gray</item>
+    </string-array>
+
 </resources>
